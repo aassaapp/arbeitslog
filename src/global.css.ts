@@ -1,4 +1,28 @@
-import { globalStyle } from '@vanilla-extract/css'
+import { globalFontFace, globalStyle } from '@vanilla-extract/css'
+
+globalFontFace('h747', {
+  src: `url(/fonts/Hoi747-Regular.woff2)`,
+  fontStyle: 'normal',
+  fontWeight: 400,
+})
+
+globalFontFace('h747', {
+  src: `url(/fonts/Hoi747-Semibold.woff2)`,
+  fontStyle: 'normal',
+  fontWeight: 600,
+})
+
+globalFontFace('h747', {
+  src: `url(/fonts/Hoi747-Bold.woff2)`,
+  fontStyle: 'normal',
+  fontWeight: 700,
+})
+
+globalFontFace('h747', {
+  src: `url(/fonts/Hoi747-Black.woff2)`,
+  fontStyle: 'normal',
+  fontWeight: 900,
+})
 
 globalStyle('*, *::before, *::after', {
   boxSizing: 'border-box',
@@ -9,6 +33,10 @@ globalStyle('body', {
   padding: 0,
   fontSize: '100%',
   lineHeight: 1,
+})
+
+globalStyle('body, input, button, figcaption', {
+  fontFamily: 'h747',
 })
 
 globalStyle('img', {
